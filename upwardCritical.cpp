@@ -1,3 +1,16 @@
+/* 
+input format:
+
+
+#nodes #edges
+u1 v1 cap1
+u2 v2 cap2
+.
+.
+.
+um vm capm
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -80,6 +93,7 @@ int main(){
     dfs(t,s,t,g,gOrig,vis,ans,upCriticalEdgeSet);
     for(auto x:ans){
         cout<<"{ ";
+        reverse(x.begin(),x.end());
         for(auto p:x){
             cout<<p.first<<"-"<<p.second<<"  ";
         }
